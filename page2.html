@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dreamline AI</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #171818; /* Assuming a dark theme similar to the images */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 20px;
+        }
+        .logo {
+            flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+            max-width: 50%; /* Maximum width on larger screens */
+            margin: 10px;
+            text-align: center;
+        }
+        .cycle-graph {
+            flex: 1 1 300px;
+            max-width: 50%;
+            margin: 10px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .logo, .cycle-graph {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body onclick="window.location.href='page3.html';">
+    <div class="container">
+        <div class="logo">
+            <!-- You will need to host the image and provide the URL, or use a data URI -->
+            <img src="folder/logo.png" alt="Dreamline AI Logo" style="max-width:100%;">
+        </div>
+        <div class="cycle-graph">
+            <!-- Similarly for the cycle graph image -->
+            <img src="folder/cycle.png" alt="Cycle Graph" style="max-width:100%;">
+        </div>
+    </div>
+</body>
+</html>

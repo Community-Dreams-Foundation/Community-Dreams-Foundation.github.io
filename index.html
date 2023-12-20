@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Did You Know?</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+        }
+        .modal-background {
+            background-color: rgba(192, 190, 190, 0.4); /* Dim the background */
+            height: 100%; /* Full height */
+            width: 100%; /* Full width */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px; /* Could be responsive */
+            z-index: 2;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal-text {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="modal-background" id="modalBackground">
+        <div class="modal-content">
+            <span class="close" onclick="window.location.href='page2.html'">&times;</span>
+            <h2>Did You Know?</h2>
+            <p class="modal-text">
+                In 2022, 17 federal agencies reported $247 billion in estimated improper payments, averaging $20.5 billion of waste per month or about $683 million per day, according to the Open the Books report. Meaning a significant amount of all incentives in the U.S. have either gone unused, been misappropriated or aggressively lack impact due to poor awareness, inaccuracy, and inefficiency in deployment.
+            </p>
+        </div>
+    </div>
+    <script>
+        // If the user clicks anywhere outside of the modal, close it and redirect to the next page
+        window.onclick = function(event) {
+            if (event.target == modalBackground) {
+                window.location.href='page2.html';
+            }
+        }
+    </script>
+</body>
+</html>
