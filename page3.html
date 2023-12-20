@@ -13,20 +13,31 @@
         }
         .container {
             display: flex;
-            flex-wrap: wrap;
+            /* flex-wrap: wrap;
             justify-content: center;
             align-items: flex-start;
             height: 100%;
+            padding: 20px; */
+            flex-direction: row; /* Set side by side by default */
+            justify-content: center;
+            align-items: flex-start;
             padding: 20px;
         }
         .left-content, .right-content {
-            flex-basis: 50%;
-            padding: 10px;
+            /* flex-basis: 50%;
+            padding: 10px; */
             line-height: 1.6;
+            flex: 1; /* Both sections take up equal space */
+            margin: 10px;
         }
-        @media (max-width: 768px) {
+        /* @media (max-width: 768px) {
             .left-content, .right-content {
                 flex-basis: 100%;
+            }
+        } */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
             }
         }
         .next-button {
